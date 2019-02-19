@@ -19,7 +19,7 @@ public class NumberToTextConverter {
         } else if (quotient < 100) {
             return convertThreeDigitsNumber(number);
         } else {
-            return "Invalid number, number must be less than 100 and greater than 0";
+            return "Invalid number, number must be less than 1000 and greater than 0";
         }
     }
 
