@@ -17,7 +17,13 @@ public class NumberToTextConverterTest {
     @Test
     public void testInvalidNumber(){
         numberConverted = converter.convertNumberToText(-1);
-        assertEquals("Number must be greater than 0", numberConverted);
+        assertEquals("Invalid number, number must be less than 100 and greater than 0", numberConverted);
+    }
+
+    @Test
+    public void testOutOfBound() {
+        numberConverted = converter.convertNumberToText(1000);
+        assertEquals("Invalid number, number must be less than 100 and greater than 0", numberConverted);
     }
 
     @Test
