@@ -11,7 +11,6 @@ package vn.codegym;
 public class NumberToTextConverter {
 
     public String convertNumberToText(int number) {
-        if (number < 0) return "Number must be greater than 0";
         int quotient = number / 10;
         if (quotient == 0) {
             return convertOneDigitNumber(number);
@@ -20,7 +19,7 @@ public class NumberToTextConverter {
         } else if (quotient < 100) {
             return convertThreeDigitsNumber(number);
         } else {
-            return "Invalid number";
+            return "Invalid number, number must be less than 100 and greater than 0";
         }
     }
 
